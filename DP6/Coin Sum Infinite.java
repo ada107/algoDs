@@ -6,7 +6,7 @@ public class Solution {
             int dp2[] = new int[B+1];
             for(int j=0;j<=B;j++){
                 if(j>=A[i]){
-                    dp2[j] = dp1[j] + dp2[j-A[i]];
+                    dp2[j] = (dp1[j] + dp2[j-A[i]])%1000007;
                 }
                 else dp2[j] = dp1[j];
             }
